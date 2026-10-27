@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pqblocks-jose"
+version = "0.1.0"
+description = "Post-quantum hybrid JOSE library supporting ML-KEM and ML-DSA JWE and JWS tokens."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.11"
+authors = [{name = "The PQBlocks Authors"}]
+keywords = ["post-quantum", "pqc", "hybrid", "jose", "jwe", "jws", "jwt"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security :: Cryptography",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = ["cffi", "cryptography"]
+
+[project.optional-dependencies]
+test = ["dilithium-py", "hypothesis", "numpy", "pytest", "scipy"]
+
+[project.scripts]
+pqblocks-jose = "pqblocks_jose.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/PQBlocks/hybrid-jose"
+Documentation = "https://github.com/PQBlocks/hybrid-jose#readme"
+Source = "https://github.com/PQBlocks/hybrid-jose"
+Changelog = "https://github.com/PQBlocks/hybrid-jose/blob/main/CHANGELOG.md"
+Issues = "https://github.com/PQBlocks/hybrid-jose/issues"
+Security = "https://github.com/PQBlocks/hybrid-jose/security/policy"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

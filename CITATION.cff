@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "pqblocks-jose"
+version: "0.1.0"
+license: Apache-2.0
+repository-code: "https://github.com/PQBlocks/hybrid-jose"
+authors:
+  - name: "The PQBlocks Authors"
+keywords:
+  - post-quantum
+  - pqc
+  - hybrid
+  - jose
+  - jwe
+  - jws
+  - jwt
+abstract: "Post-quantum hybrid JOSE library supporting ML-KEM and ML-DSA JWE and JWS tokens."
